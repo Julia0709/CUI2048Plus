@@ -1,26 +1,29 @@
+import com.sun.xml.internal.bind.v2.TODO;
+
 import java.util.Scanner;
 
 class GameManager {
     private final static String[] MODE = {"EASY", "NORMAL", "HARD", "EXPERT"};
 
     void gameManager() {
-        Scanner scan = new Scanner(System.in);
+//        Scanner scan = new Scanner(System.in);
+//
+//        System.out.println("Select a mode: \n" +
+//                "1 --- " + MODE[0] + " \n" +
+//                "2 --- " + MODE[1] + " \n" +
+//                "3 --- " + MODE[2] + " \n" +
+//                "4 --- " + MODE[3]
+//        );
 
-        System.out.println("Select a mode: \n" +
-                "1 --- " + MODE[0] + " \n" +
-                "2 --- " + MODE[1] + " \n" +
-                "3 --- " + MODE[2] + " \n" +
-                "4 --- " + MODE[3]
-        );
-
-        int goal = 0;
-        while (goal <= 0) {
-            goal = selectMode(scan.nextInt());
-        }
-
-        System.out.println(goal);
+        // TODO Change to 0
+        int goal = 512;
+//        while (goal <= 0) {
+//            goal = selectMode(scan.nextInt());
+//        }
 
         int score = 0;
+        System.out.println("Score: " + score);
+
         GameLogic logic = new GameLogic();
         logic.playGame(goal, score);
     }
