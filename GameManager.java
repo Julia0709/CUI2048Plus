@@ -17,6 +17,12 @@ class GameManager {
         while (goal <= 0) {
             goal = selectMode(scan.nextInt());
         }
+
+        System.out.println(goal);
+
+        int score = 0;
+        GameLogic logic = new GameLogic();
+        logic.playGame(goal, score);
     }
 
     private int selectMode(int n) {
